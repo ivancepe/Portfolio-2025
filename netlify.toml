@@ -1,0 +1,24 @@
+# netlify.toml
+
+# This section tells Netlify how to build your site.
+[build]
+  # Your deployable files are in the root directory
+  publish = "."
+
+# This section configures local development with `netlify dev`.
+# This prevents Netlify from incorrectly auto-detecting a framework (like Hugo).
+[dev]
+  # Force Netlify CLI to use a simple static file server.
+  framework = "#static"
+  
+  # Specify the directory to serve (must match the [build].publish value).
+  publish = "."
+  
+  # The port Netlify dev will use for the browser (default is 8888, but can be set here)
+  # port = 8888 
+
+
+# This section configures your serverless functions.
+[functions]
+  # This tells Netlify that your functions live in this directory.
+  directory = "netlify/functions"

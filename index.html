@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ivan Cepe - Front-End Web Developer Portfolio showcasing projects, skills, and contact information." />
+  <title>Ivan Cepe | Portfolio</title>
+  <link rel="shortcut icon" href="public/images/icons/favicon.ico" type="image/x-icon">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#e45447",
+            secondary: "#001f3f",
+            grey: "#F5F5F5",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+            roboto: ["Roboto", "sans-serif"],
+          },
+          animation: {
+            'scroll': 'scroll 40s linear infinite',
+          },
+          keyframes: {
+            scroll: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-100%)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<body class="font-poppins bg-white text-secondary">
+
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50 transition-opacity duration-700">
+    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 bg-white shadow z-40">
+    <nav class="flex items-center justify-between w-[90%] max-w-6xl mx-auto py-4">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="/public/images/logo/logo-red.png" alt="Ivan Cepe Logo" class="w-12" />
+      </a>
+
+      <!-- Nav Links -->
+      <ul id="nav-links" class="hidden md:flex gap-8 font-medium">
+        <li><a href="src/pages/about.html" class="hover:text-primary">About</a></li>
+        <li><a href="src/pages/projects.html" class="hover:text-primary">Projects</a></li>
+        <li><a href="src/pages/contact.html" class="hover:text-primary">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Menu -->
+      <ion-icon name="menu" class="text-3xl cursor-pointer md:hidden" onclick="toggleMenu(this)"></ion-icon>
+    </nav>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-nav" class="fixed top-16 left-0 w-full bg-white shadow-md flex-col items-center md:hidden z-30 transition-all duration-300 hidden">
+      <a href="src/pages/about.html" class="py-4 w-full text-center hover:bg-grey block border-b border-grey" onclick="closeMobileNav()">About</a>
+      <a href="src/pages/projects.html" class="py-4 w-full text-center hover:bg-grey block border-b border-grey" onclick="closeMobileNav()">Projects</a>
+      <a href="src/pages/contact.html" class="py-4 w-full text-center hover:bg-grey block" onclick="closeMobileNav()">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="w-[90%] max-w-6xl mx-auto flex flex-col md:flex-row items-center py-6 gap-12">
+    <div class="flex-1 text-center md:text-left">
+      <p class="text-lg text-primary">Hi, I'm</p>
+      <h1 class="text-4xl md:text-6xl font-bold mt-2">Ivan Golosinda</h1>
+      <h2 class="text-2xl md:text-3xl text-secondary mt-4">System & Cloud Developer</h2>
+      <p class="mt-6 text-gray-600 max-w-lg">
+        I build full-stack web platforms and scalable systems with an emphasis on clean architecture, performance, and stability.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6">
+        <a href="src/pages/projects.html" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-secondary transition">View Projects</a>
+        <a href="src/pages/contact.html" class="border border-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition">Contact Me</a>
+      </div>
+    </div>
+    <div class="flex-1 flex justify-center">
+      <img src="./public/images/me/suit.png" alt="Ivan Cepe Developer" class="w-80 md:w-[400px]" />
+    </div>
+  </section>
+
+  <!-- Logo Carousel Section -->
+<section class="bg-white">
+  <div class="w-[90%] max-w-5xl mx-auto">
+    <!-- <h3 class="text-center text-lg text-gray-500 mb-4">Tools & Technologies</h3> -->
+    <div class="overflow-hidden relative shadow-xl rounded-full">
+      <div class="flex animate-scroll p-4" style="width: 200%;">
+        
+        <div class="flex justify-around items-center w-full flex-shrink-0">
+          
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/React.png" alt="React Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/JavaScript (1).png" alt="JavaScript Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Node.js.png" alt="Node.js Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Tailwind CSS.png" alt="Tailwind CSS Logo" class="w-12 h-12 object-contain">
+          </div>
+
+           <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/CSS3.png" alt="CSS3 Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/HTML5.png" alt="HTML5 Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Bootstrap.png" alt="Bootstrap Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Firebase.png" alt="Firebase Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Google Cloud.png" alt="Google Cloud Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/PostgresSQL.png" alt="PostgreSQL Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Postman.png" alt="Postman Logo" class="w-12 h-12 object-contain">
+          </div>
+
+           <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/GitHub.png" alt="GitHub Logo" class="w-12 h-12 object-contain">
+          </div>
+        </div>
+
+        <div class="flex justify-around items-center w-full flex-shrink-0">
+          
+         <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/React.png" alt="React Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/JavaScript (1).png" alt="JavaScript Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Node.js.png" alt="Node.js Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Tailwind CSS.png" alt="Tailwind CSS Logo" class="w-12 h-12 object-contain">
+          </div>
+
+           <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/CSS3.png" alt="CSS3 Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/HTML5.png" alt="HTML5 Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Bootstrap.png" alt="Bootstrap Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Firebase.png" alt="Firebase Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Google Cloud.png" alt="Google Cloud Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/PostgresSQL.png" alt="PostgreSQL Logo" class="w-12 h-12 object-contain">
+          </div>
+
+          <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/Postman.png" alt="Postman Logo" class="w-12 h-12 object-contain">
+          </div>
+
+           <div class="flex items-center justify-center w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="public/images/logo/GitHub.png" alt="GitHub Logo" class="w-12 h-12 object-contain">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Featured Projects -->
+  <section class="bg-gray py-32">
+    <div class="w-[90%] max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold">Featured Projects</h2>
+      <div class="w-16 h-1 bg-primary mx-auto mt-2"></div>
+      <p class="mt-4 text-gray-600">Some of my best work so far.</p>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <!-- Project Card -->
+        <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition">
+          <img src="./public/img/project1.png" alt="Project 1" class="rounded-md" />
+          <h3 class="mt-4 font-bold text-xl">Cloud App</h3>
+          <p class="text-gray-600 mt-2">A responsive web app UI built with Tailwind and JavaScript.</p>
+          <a href="#" target="_blank" class="text-primary font-medium mt-4 inline-block">View Project →</a>
+        </div>
+        <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition">
+          <img src="./public/img/project2.png" alt="Project 2" class="rounded-md" />
+          <h3 class="mt-4 font-bold text-xl">Kurtis Classroom</h3>
+          <p class="text-gray-600 mt-2">An e-learning website concept focusing on clean UI and accessibility.</p>
+          <a href="#" target="_blank" class="text-primary font-medium mt-4 inline-block">View Project →</a>
+        </div>
+        <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition">
+          <img src="./public/img/project3.png" alt="Project 3" class="rounded-md" />
+          <h3 class="mt-4 font-bold text-xl">JLG Church</h3>
+          <p class="text-gray-600 mt-2">A modern, responsive site designed for a local church community.</p>
+          <a href="#" target="_blank" class="text-primary font-medium mt-4 inline-block">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-20 text-center w-[90%] max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold">Let's Work Together</h2>
+    <p class="mt-4 text-gray-600">Got a project or idea? I'd love to hear from you.</p>
+    <a href="src/pages/contact.html" class="mt-8 inline-block bg-primary text-white px-8 py-3 rounded-full hover:bg-secondary transition">Hire Me</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-secondary text-white py-8">
+    <div class="w-[90%] max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
+      <p>&copy; 2025 Ivan Cepe. All rights reserved.</p>
+      <div class="flex gap-6 mt-4 sm:mt-0">
+        <a href="https://github.com/ivancepe" target="_blank"><ion-icon name="logo-github" class="text-2xl"></ion-icon></a>
+        <a href="https://linkedin.com/in/ivan-cepe-4508a724a" target="_blank"><ion-icon name="logo-linkedin" class="text-2xl"></ion-icon></a>
+        <a href="https://twitter.com/ivancepe" target="_blank"><ion-icon name="logo-twitter" class="text-2xl"></ion-icon></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Loader
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      loader.classList.add("opacity-0");
+      setTimeout(() => loader.style.display = "none", 700);
+    });
+
+    // Mobile Menu Toggle
+    function toggleMenu(icon) {
+      const nav = document.getElementById("mobile-nav");
+      if (nav.classList.contains("hidden")) {
+        nav.classList.remove("hidden");
+        icon.name = "close";
+        document.body.style.overflow = "hidden"; // Prevent background scroll
+      } else {
+        nav.classList.add("hidden");
+        icon.name = "menu";
+        document.body.style.overflow = "auto";
+      }
+    }
+
+    // Close mobile nav when a link is clicked
+    function closeMobileNav() {
+      const nav = document.getElementById("mobile-nav");
+      const menuIcon = document.querySelector('ion-icon[name="close"]');
+      nav.classList.add("hidden");
+      if (menuIcon) menuIcon.name = "menu";
+      document.body.style.overflow = "auto";
+    }
+
+    // Pause carousel animation on hover
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousel = document.querySelector('.animate-scroll');
+      if (carousel) {
+        carousel.addEventListener('mouseenter', function() {
+          this.style.animationPlayState = 'paused';
+        });
+        carousel.addEventListener('mouseleave', function() {
+          this.style.animationPlayState = 'running';
+        });
+      }
+    });
+  </script>
+</body>
+</html>

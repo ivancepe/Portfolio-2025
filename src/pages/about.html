@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Ivan Cepe - Front-End Web Developer." />
+   <link rel="shortcut icon" href="public/images/icons/favicon.ico" type="image/x-icon">
+  <title>About | Ivan Cepe</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#e45447", secondary: "#001f3f", grey: "#F5F5F5" },
+          fontFamily: { poppins: ["Poppins", "sans-serif"], roboto: ["Roboto", "sans-serif"] },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-poppins bg-white text-secondary flex flex-col min-h-screen">
+
+  <header class="sticky top-0 bg-white shadow z-40">
+    <nav class="flex items-center justify-between w-[90%] max-w-6xl mx-auto py-4">
+      <a href="/index.html" class="flex items-center gap-2">
+        <img src="/public/images/logo/logo-red.png" alt="Ivan Cepe Logo" class="w-12" />
+      </a>
+      <ul id="nav-links" class="hidden md:flex gap-8 font-medium">
+        <li><a href="about.html" class="text-primary">About</a></li>
+        <li><a href="projects.html" class="hover:text-primary">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
+      </ul>
+      <ion-icon name="menu" class="text-3xl cursor-pointer md:hidden" onclick="toggleMenu(this)"></ion-icon>
+    </nav>
+    <div id="mobile-nav" class="fixed top-16 left-0 w-full bg-white shadow-md flex-col items-center md:hidden z-30 transition-all duration-300 hidden">
+      <a href="about.html" class="py-4 w-full text-center hover:bg-grey block border-b border-grey" onclick="closeMobileNav()">About</a>
+      <a href="projects.html" class="py-4 w-full text-center hover:bg-grey block border-b border-grey" onclick="closeMobileNav()">Projects</a>
+      <a href="contact.html" class="py-4 w-full text-center hover:bg-grey block" onclick="closeMobileNav()">Contact</a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <section class="w-[90%] max-w-6xl mx-auto py-20">
+      <h1 class="text-4xl font-bold">About Me</h1>
+      <div class="w-16 h-1 bg-primary mt-2"></div>
+
+      <div class="mt-12 flex flex-col md:flex-row items-center gap-12">
+        <img src="../../public/images/me/about-image-square.jpg" alt="Ivan Cepe Profile" class="w-64 rounded-full shadow" />
+        <div>
+          <p class="text-gray-600 leading-relaxed">
+            Hello! I’m Ivan Cepe, a passionate front-end developer with a love for building modern, 
+            responsive, and user-friendly websites. I focus on clean code, accessibility, and great design.
+          </p>
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            I enjoy learning new technologies, improving my skills, and working on projects that make a positive impact.
+          </p>
+          <a href="contact.html" class="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-full hover:bg-secondary transition">Let’s Connect</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-grey">
+      <div class="w-[90%] max-w-6xl mx-auto py-20">
+        <h2 class="text-3xl font-bold text-center">My Certifications</h2>
+        <div class="w-16 h-1 bg-primary mt-2 mx-auto"></div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+         <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition overflow-hidden flex flex-col">
+            <img src="/public/images/certificates/certificate-name.jpg" alt="Description of Your Certificate" class="w-full h-48 object-cover">
+            
+            <div class="p-6">
+                <h3 class="text-xl font-bold">Responsive Web Design</h3>
+                <p class="text-gray-500 mt-2">freeCodeCamp</p>
+                <p class="text-sm text-gray-400 mt-1">Issued: Jan 2025</p>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition overflow-hidden flex flex-col">
+        <img src="/public/images/certificates/certificate-name.jpg" alt="Description of Your Certificate" class="w-full h-48 object-cover">
+        
+        <div class="p-6">
+            <h3 class="text-xl font-bold">Responsive Web Design</h3>
+            <p class="text-gray-500 mt-2">freeCodeCamp</p>
+            <p class="text-sm text-gray-400 mt-1">Issued: Jan 2025</p>
+        </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition overflow-hidden flex flex-col">
+        <img src="/public/images/certificates/certificate-name.jpg" alt="Description of Your Certificate" class="w-full h-48 object-cover">
+        
+        <div class="p-6">
+            <h3 class="text-xl font-bold">Responsive Web Design</h3>
+            <p class="text-gray-500 mt-2">freeCodeCamp</p>
+            <p class="text-sm text-gray-400 mt-1">Issued: Jan 2025</p>
+        </div>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-secondary text-white py-6 text-center mt-auto">
+    <p>&copy; 2025 Ivan Cepe. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMenu(icon) {
+      const nav = document.getElementById("mobile-nav");
+      if (nav.classList.contains("hidden")) {
+        nav.classList.remove("hidden");
+        icon.name = "close";
+        document.body.style.overflow = "hidden";
+      } else {
+        nav.classList.add("hidden");
+        icon.name = "menu";
+        document.body.style.overflow = "auto";
+      }
+    }
+    // Close mobile nav when a link is clicked
+    function closeMobileNav() {
+      const nav = document.getElementById("mobile-nav");
+      const menuIcon = document.querySelector('ion-icon[name="close"]');
+      nav.classList.add("hidden");
+      if (menuIcon) menuIcon.name = "menu";
+      document.body.style.overflow = "auto";
+    }
+  </script>
+
+</body>
+</html>
