@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Ivan Cepe - Front-End Web Developer Portfolio showcasing projects, skills, and contact information." />
-  <title>Ivan Cepe | Portfolio</title>
+  <title>Ivan Golosinda | Portfolio</title>
   <link rel="shortcut icon" href="public/images/icons/favicon.ico" type="image/x-icon">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -78,7 +78,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="w-[90%] max-w-6xl mx-auto flex flex-col md:flex-row items-center py-6 gap-12">
+  <section class="w-[90%] max-w-6xl mx-auto flex flex-col md:flex-row items-center pt-6 gap-12">
     <div class="flex-1 text-center md:text-left">
       <p class="text-lg text-primary">Hi, I'm</p>
       <h1 class="text-4xl md:text-6xl font-bold mt-2">Ivan Golosinda</h1>
@@ -87,8 +87,8 @@
         I build full-stack web platforms and scalable systems with an emphasis on clean architecture, performance, and stability.
       </p>
       <div class="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6">
-        <a href="src/pages/projects.html" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-secondary transition">View Projects</a>
-        <a href="src/pages/contact.html" class="border border-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition">Contact Me</a>
+        <a href="src/pages/projects.html" class="bg-primary text-white px-12 py-3 rounded-full hover:bg-secondary transition">View Projects</a>
+        <a href="src/pages/contact.html" class="border border-primary px-12 py-3 rounded-full hover:bg-primary hover:text-white transition">Contact Me</a>
       </div>
     </div>
     <div class="flex-1 flex justify-center">
@@ -211,36 +211,53 @@
 </section>
 
   <!-- Featured Projects -->
-  <section class="bg-gray py-32">
-    <div class="w-[90%] max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold">Featured Projects</h2>
-      <div class="w-16 h-1 bg-primary mx-auto mt-2"></div>
-      <p class="mt-4 text-gray-600">Some of my best work so far.</p>
+ <section class="bg-gray py-32">
+  <div class="w-[90%] max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold">Featured Projects</h2>
+    <div class="w-16 h-1 bg-primary mx-auto mt-2"></div>
+    <p class="mt-4 text-gray-600">Some of my best work so far.</p>
 
-      <div class="grid md:grid-cols-3 gap-8 mt-12">
-        <!-- Project Card -->
-        <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition">
-          <img src="./public/img/project1.png" alt="Project 1" class="rounded-md" />
-          <h3 class="mt-4 font-bold text-xl">Cloud App</h3>
-          <p class="text-gray-600 mt-2">A responsive web app UI built with Tailwind and JavaScript.</p>
-          <a href="#" target="_blank" class="text-primary font-medium mt-4 inline-block">View Project →</a>
-        </div>
-        <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition">
-          <img src="./public/img/project2.png" alt="Project 2" class="rounded-md" />
-          <h3 class="mt-4 font-bold text-xl">Kurtis Classroom</h3>
-          <p class="text-gray-600 mt-2">An e-learning website concept focusing on clean UI and accessibility.</p>
-          <a href="#" target="_blank" class="text-primary font-medium mt-4 inline-block">View Project →</a>
-        </div>
-        <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition">
-          <img src="./public/img/project3.png" alt="Project 3" class="rounded-md" />
-          <h3 class="mt-4 font-bold text-xl">JLG Church</h3>
-          <p class="text-gray-600 mt-2">A modern, responsive site designed for a local church community.</p>
-          <a href="#" target="_blank" class="text-primary font-medium mt-4 inline-block">View Project →</a>
+    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12 text-left">
+      
+      <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <img src="./public/images/project images/E-recruitment.png" alt="E-Recruitment System" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="font-bold text-xl text-white">E-Recruitment System</h3>
+          <p class="text-gray-300 mt-2">A fullstack recruitment system built with custom Web pages & Kintone</p>
+          <a href="https://ggpcapplicationform.netlify.app/" target="_blank" class="text-white border border-white rounded-full py-2 px-6 mt-4 inline-block hover:bg-white hover:text-black transition-colors">View Project</a>
         </div>
       </div>
-    </div>
-  </section>
 
+      <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <img src="./public/images/project images/Manaseh Photography.png" alt="Manaseh Photography" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="font-bold text-xl text-white">Manaseh Photography</h3>
+          <p class="text-gray-300 mt-2">A responsive Gallery Portfolio for Manaseh Photography</p>
+          <a href="https://manaseh-photography.netlify.app/" target="_blank" class="text-white border border-white rounded-full py-2 px-6 mt-4 inline-block hover:bg-white hover:text-black transition-colors">View Project</a>
+        </div>
+      </div>
+
+      <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <img src="./public/images/project images/CO2 Dashboard.png" alt="CO2 Dashboard" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="font-bold text-xl text-white">CO2 Dashboard</h3>
+          <p class="text-gray-300 mt-2">Gunma Gohkin Ph. Corporation's data visualization dashboard using Chart.js to track emissions.</p>
+          <a href="https://ggpc-co2-daily-dashboard.netlify.app/" target="_blank" class="text-white border border-white rounded-full py-2 px-6 mt-4 inline-block hover:bg-white hover:text-black transition-colors">View Project</a>
+        </div>
+      </div>
+
+      <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <img src="./public/images/project images/Cloudy.png" alt="Cloudy-Cloud App" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="font-bold text-xl text-white">Cloudy-Cloud</h3>
+          <p class="text-gray-300 mt-2">A modern landing page built with the React framework.</p>
+          <a href="https://cloudy-cloud-app.netlify.app/" target="_blank" class="text-white border border-white rounded-full py-2 px-6 mt-4 inline-block hover:bg-white hover:text-black transition-colors">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
   <!-- Contact CTA -->
   <section class="py-20 text-center w-[90%] max-w-6xl mx-auto">
     <h2 class="text-3xl font-semibold">Let's Work Together</h2>
